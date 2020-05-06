@@ -6,6 +6,7 @@ services:
             context: .
         environment: 
             debug: "true"
+            db_password: $db_password
         command: site.yml -e '{"ecs_tasks":["migrate", "collectstatic"], "stack_config":"true", "debug":"true"}'
     
     ansible-update:
@@ -13,4 +14,5 @@ services:
             context: .
         environment: 
             debug: "true"
+            db_password: $db_password
         command: site.yml -e '{"image_tag":"reboot87/todobackend:latest", "debug":"true"}'

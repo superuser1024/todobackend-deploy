@@ -1,7 +1,7 @@
 ---
 - name: create/update stack
   cloudformation:
-    stack_name: todobackend-v2
+    stack_name: todobackend
     state: present
     template: templates/stack.yml
     template_format: yaml

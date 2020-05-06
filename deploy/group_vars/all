@@ -1,0 +1,10 @@
+---
+vpc_id: vpc-c48782be
+subnet_id: subnet-31ed4f3f
+ec2_keypair: aws-adam-v3
+instance_count: 2
+db_subnets:
+  - subnet-31ed4f3f
+  - subnet-48a81005
+db_availability_zone: us-east-1a
+db_username: todobackend

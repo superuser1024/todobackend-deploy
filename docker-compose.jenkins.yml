@@ -12,4 +12,5 @@ services:
         build: 
             context: .
         environment: 
+            debug: "true"
         command: site.yml -e '{"image_tag":"reboot87/todobackend:latest", "debug":"true"}'

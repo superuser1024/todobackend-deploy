@@ -15,4 +15,4 @@ services:
         environment: 
             debug: "true"
         env_file: .env
-        command: site.yml -e '{"ecs_tasks":["migrate", "collectstatic"], "image_tag":"reboot87/todobackend:latest", "debug":"true"}'
+        command: site.yml -e '{"image_tag":"reboot87/todobackend:latest", "debug":"true"}'

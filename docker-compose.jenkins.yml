@@ -1,0 +1,15 @@
+version: '3.1'
+
+services: 
+    ansible-startup:
+        build: 
+            context: .
+        environment: 
+            debug: "true"
+        command: site.yml -e '{"ecs_tasks":["migrate", "collectstatic"], "stack_config":"true", "debug":"true"}'
+    
+    ansible-update:
+        build: 
+            context: .
+        environment: 
+        command: site.yml -e '{"image_tag":"reboot87/todobackend:latest", "debug":"true"}'
